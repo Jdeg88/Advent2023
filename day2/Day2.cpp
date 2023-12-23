@@ -1,6 +1,7 @@
 #include<iostream>
 #include<fstream>
 #include<string>
+#include<map>
 using namespace std;
 
 const int MAX = 3;
@@ -8,6 +9,7 @@ bool impossible(string);
 int getSubString(string);
 int getColonSubString(string);
 int getSemiColonCount(string);
+void mapAddition(map<string,int>);
 
 int main(){
     ifstream myFile("info.txt");
@@ -39,7 +41,12 @@ bool impossible(string game){
     // for(int i=0; i < size+1; i++){
     //     cout << games[i] << endl;
     // }
-
+    map<string,int> newMap = {
+        {"blue",0},
+        {"green",0},
+        {"red",0}
+    };
+    
     return false;
 }
 
@@ -68,3 +75,5 @@ int getSemiColonCount(string line){
     }
     return count;
 }
+
+void mapAddition(map<string,int> myMap){}
